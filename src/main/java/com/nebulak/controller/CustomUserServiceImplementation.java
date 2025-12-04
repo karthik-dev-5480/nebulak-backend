@@ -38,7 +38,7 @@ private PasswordEncoder passwordEncoder;
 		this.passwordEncoder=passwordEncoder;
 	}
 	
-	@Cacheable(value = "authUsers", key = "#username")
+	//@Cacheable(value = "authUsers", key = "#username")
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 	    User user = userRepository.findByEmail(username);
@@ -59,7 +59,7 @@ private PasswordEncoder passwordEncoder;
 	    return userDetails;
 	}
 	
-	@Cacheable(value = "userEntityCache", key = "#username")
+	//@Cacheable(value = "userEntityCache", key = "#username")
 	public User loadUserDetailsByUsername(String username) throws UsernameNotFoundException {
 		User user=userRepository.findByEmail(username);
 		if(user==null) {
@@ -98,7 +98,7 @@ private PasswordEncoder passwordEncoder;
         return new UserDTO(user);
     }
 
-    @CacheEvict(value = "authUsers", key = "#email")
+    //@CacheEvict(value = "authUsers", key = "#email")
 	public Boolean activateUser(String email) {
 		User user=userRepository.findByEmail(email);
 		user.setEnabled(true);
@@ -108,7 +108,7 @@ private PasswordEncoder passwordEncoder;
 		return true;
 	}
 
-	@Cacheable(value = "userEntityCache", key = "#email")
+	//@Cacheable(value = "userEntityCache", key = "#email")
 	public User createUser(String email, String password, String firstNString, String lastNString,
 			String activationToken, Calendar calendar) {
 		// TODO Auto-generated method stub

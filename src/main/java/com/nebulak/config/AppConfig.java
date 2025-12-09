@@ -37,7 +37,10 @@ public class AppConfig {
 	@Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:3000")); // allow all origins
+        config.setAllowedOrigins(List.of(
+                "http://localhost:3000",
+                "https://nebulak-frontend.vercel.app" // ADD THIS LINE
+            )); // allow all origins
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*")); 
         config.setAllowCredentials(true);

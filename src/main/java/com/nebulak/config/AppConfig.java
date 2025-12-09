@@ -39,7 +39,7 @@ public class AppConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of(
                 "http://localhost:3000",
-                "https://nebulak-frontend-git-main-karthik-dev-5480s-projects.vercel.app" // ADD THIS LINE
+                "https://nebulak-frontend-f2ds-git-main-karthik-dev-5480s-projects.vercel.app" // ADD THIS LINE
             )); // allow all origins
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*")); 

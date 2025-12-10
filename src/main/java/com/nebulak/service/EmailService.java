@@ -16,8 +16,8 @@ public class EmailService {
 
     public void sendActivationEmail(String toEmail, String activationLink) throws MailException {
         SimpleMailMessage message = new SimpleMailMessage();
-        
-        message.setFrom("no-reply@yourdomain.com"); // Set your sender email
+        System.out.println("inmail service");
+        message.setFrom("dev.karthik.cheekati@gmail.com"); // Set your sender email
         message.setTo(toEmail);
         message.setSubject("Account Activation Required");
         

@@ -26,6 +26,10 @@ public class EmailService {
             activationLink
         );
         message.setText(emailContent);
+        System.out.println(emailContent);
+        System.out.println(activationLink);
+        System.out.println(toEmail);
+        System.out.println(message);
 
         mailSender.send(message);
     }

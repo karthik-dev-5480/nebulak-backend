@@ -20,7 +20,7 @@ public class EmailService {
     public void sendActivationEmail(String toEmail, String activationLink){
        SimpleMailMessage message = new SimpleMailMessage();
     	
-       message.setFrom("onboarding@resend.dev"); // Set your sender email
+       message.setFrom("dev.karthik.cheekati@gmail.com"); // Set your sender email
         message.setTo(toEmail);
         message.setSubject("Account Activation Required");
         

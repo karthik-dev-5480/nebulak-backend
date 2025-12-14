@@ -35,6 +35,7 @@ import com.nebulak.model.UserRoles;
 import com.nebulak.repository.UserRepository;
 import com.nebulak.service.EmailService;
 import com.nebulak.service.RoleService;
+import com.resend.core.exception.ResendException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
@@ -67,7 +68,7 @@ public class AuthController {
 	
 	
 	@PostMapping("/signup")
-	public ResponseEntity<AuthResponse>createUserHandler(@RequestBody User user)throws UserException{
+	public ResponseEntity<AuthResponse>createUserHandler(@RequestBody User user)throws UserException, ResendException{
 		String email=user.getEmail();
 		String password=user.getPassword();
 		String firstNString=user.getFirstName();

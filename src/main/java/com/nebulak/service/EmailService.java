@@ -131,4 +131,9 @@ public void sendActivationEmail(String toEmail, String activationLink){
 	        mailSender.send(message);
 		
 	}
+
+	public void sendSubscriptionEmail(String email) {
+		// TODO Auto-generated method stub
+		
+	}
 }

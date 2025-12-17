@@ -89,7 +89,7 @@ public class AuthController {
 		
 		
 		try {
-	        String activationLink = "http://localhost:5454/auth/activate/" + activationToken; // Replace with your actual public domain
+	        String activationLink = "https://nebulak-backend.onrender.com/auth/activate/" + activationToken; // Replace with your actual public domain
 	        emailService.sendActivationEmail(savedUser.getEmail(), activationLink);
 	    } catch (MailException e) {
 	        System.err.println("Failed to send activation email: " + e.getMessage());

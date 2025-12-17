@@ -117,6 +117,10 @@ public void sendActivationEmail(String toEmail, String activationLink){
 		            "Support Ticket Created: TicketId - [ %s ]",
 		            id
 		        ));
+	        String subject=String.format(
+		            "Support Ticket Created: TicketId - [ %s ]",
+		            id
+		        );
 	        
 	        String emailContent = String.format(
 	            "Hello %s,\n"
@@ -127,8 +131,8 @@ public void sendActivationEmail(String toEmail, String activationLink){
 	            name
 	        );
 	        message.setText(emailContent);
-
-	        mailSender.send(message);
+	        sendMail(email, subject, emailContent);
+	        //mailSender.send(message);
 		
 	}
 

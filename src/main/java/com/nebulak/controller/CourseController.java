@@ -402,6 +402,7 @@ public class CourseController {
 				@RequestPart("video") MultipartFile videoFile) {
 
 			try {
+				System.out.println("uploading");
 				String videoUrl = s3Service.uploadFileSec(videoFile);
 
 				Topic topic = new Topic();

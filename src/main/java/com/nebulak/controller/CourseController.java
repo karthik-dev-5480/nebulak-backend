@@ -286,7 +286,7 @@ public class CourseController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
             }
             System.out.println(fullS3UrlFromDB);
-            final int EXPIRATION_SECONDS = 60; 
+            final int EXPIRATION_SECONDS = 3600; 
             String signedUrl = s3Service.generateSignedUrl(fullS3UrlFromDB, EXPIRATION_SECONDS);
             System.out.println(signedUrl);
 
